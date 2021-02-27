@@ -1,0 +1,135 @@
+/*
+  More profile stuff: https://github.com/Keijukoiso/esProfilePieces
+  For questions and to share ideas contact Keijukoiso on everskies
+
+  Remove this comment when you add the CSS to your profile.
+
+  Change circle size:   edit height and width in .container
+  Change circle color:  edit background-color in .container
+  Change text color:    edit color in .container
+  Change glow color:    edit background-color in .container::after and .container::before
+   
+*/
+
+
+.container{
+  width: 20vw;
+  background-color: #24272b;
+  height: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  font-family: roboto;
+  font-weight: bold;
+  position:relative;
+}
+
+.container::before, .container::after
+{
+position: absolute;
+content : "";
+top: -5%;
+left: -5%;
+height:110%;
+width:110%;
+border-radius:50%;
+opacity:.5;
+filter: blur(60px);
+}
+
+
+.container::after
+{
+  background-color:#00fff2c4;
+ z-index: -1;
+animation : backglow2 15s ease infinite;
+}
+
+.container::before
+{
+  background-color:#a200ff81;
+ z-index: -2;
+animation : backglow1 15s ease infinite;
+}
+
+
+
+
+@keyframes backglow1
+{
+
+0%
+{
+  transform: translate(10%, 10%) scale(.8);
+  opacity:.5;
+}
+
+ 25%
+{
+  transform: translate(-10%, 10%) scale(0.7);
+  opacity:.5;
+}
+
+ 50%
+{
+  transform: translate(-10%, -10%) scale(.95);
+  opacity:.6;
+}
+
+ 75%
+{
+  transform: translate(10%, -10%) scale(.9);
+  opacity:.2;
+}
+
+ 100%
+{
+  transform: translate(10%, 10%) scale(.8);
+  opacity:.5;
+}
+
+
+}
+
+
+
+
+
+@keyframes backglow2
+{
+
+0%
+{
+  transform: translate(-10%, -10%) scale(.8);
+  opacity:.5;
+}
+
+ 25%
+{
+  transform: translate(10%, -10%) scale(0.7);
+  opacity:.5;
+}
+
+ 50%
+{
+  transform: translate(10%, 10%) scale(.95);
+  opacity:.6;
+}
+
+ 75%
+{
+  transform: translate(-10%, 10%) scale(.9);
+  opacity:.2;
+}
+
+ 100%
+{
+  transform: translate(-10%, -10%) scale(.8);
+  opacity:.5;
+}
+
+
+}
