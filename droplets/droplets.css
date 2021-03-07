@@ -1,0 +1,259 @@
+/*
+
+  Rain effect for Everskies profile
+
+  More profile stuff: https://github.com/Keijukoiso/esProfilePieces
+  For questions and to share ideas contact Keijukoiso on everskies
+
+  Remove this comment when you add the CSS to your profile.
+
+*/
+
+
+.con{
+	display: flex;
+	position: fixed;
+	left: 5%;
+    top: 10%;
+	width: 120%;
+	pointer-events: none;
+}
+.container1{
+	width: 30vw;
+	height: 70vh;
+	display: grid;
+    
+}
+.container2{
+	width: 30vw;
+	height: 70vh;
+	display: grid;
+    
+}
+.container3{
+	width: 30vw;
+	height: 70vh;
+	display: grid;
+    
+}
+
+.row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    float: left;
+}
+
+.rain{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.rain1 {
+	--duration: calc(27s / 10);
+	--delay: 1s;
+	transform: translate(10%, 10%) scale(.9);
+}
+
+.rain2 {
+	--duration: calc(21s / 10);
+	--delay: calc(12s / 10);
+	transform: translate(-20%, 40%) scale(calc(13 / 10));
+}
+
+.rain3 {
+	--duration: calc(23s / 10);
+	--delay: 2s;
+	transform: translate(0%, 50%) scale(calc(11 / 10));
+}
+
+.rain4 {
+	--duration: 2s;
+	--delay: 4s;
+	transform: translate(0%, -10%) scale(calc(12 / 10));
+}
+
+.rain5 {
+	--duration: calc(25s / 10);
+	--delay: 0s;
+	transform: translate(10%, 0%) scale(.9);
+}
+
+.rain6 {
+	--duration: 2s;
+	--delay: calc(27s / 10);
+	transform: translate(-20%, 0%) scale(1);
+}
+
+.rain7 {
+	--duration: calc(18s / 10);
+	--delay: calc(13s / 10);
+	transform: translate(20%, -40%) scale(calc(12 / 10));
+}
+
+.rain8 {
+	--duration: calc(22s / 10);
+	--delay: 0s;
+	transform: translate(20%, 0%) scale(1);
+}
+
+.rain9 {
+	--duration: 2s;
+	--delay: .5s;
+	transform: translate(0%, -10%) scale(calc(13 / 10));
+}
+
+.drop{
+	background-color: white;
+	width: 3px;
+	height: 100px;
+	position: absolute;
+	top: calc(50% - 100px); 
+	left: calc(50% - calc(15px / 10));
+	animation-name: fall;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+	animation-fill-mode: backwards;
+}
+
+@keyframes fall{
+	0%{
+		transform: translateY(-120vh);
+	}
+	45%{
+		transform: translateY(0%);
+		opacity: 1;
+	}
+	46%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+.waves   div{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border-radius: 50%;
+	border: solid white 3px;
+	animation-name: spread;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-fill-mode: backwards;
+}
+
+.waves  div:nth-child(2){
+	animation-delay: calc(var(--delay) + .3s);
+	animation-timing-function: linear;
+}
+
+@keyframes spread{
+	0%{
+		transform: scale(0);
+		opacity: 1;
+	}
+	40%{
+		transform: scale(0);
+		opacity: 1;
+	}
+
+	100%{
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+
+
+
+
+.particles  div{
+	position: absolute;	
+	border-radius: 100%;
+	background-color: white;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	animation-fill-mode: backwards;
+}
+
+.particles  div:nth-child(1){
+	width: 7px;
+	height: 7px;
+	top: 50%;
+	left: 50%;
+	animation-name: jumpLeft;
+}
+
+.particles  div:nth-child(2){
+	width: 5px;
+	height: 5px;
+	top: 30%;
+	left: 50%;
+	animation-name: jumpLeft;
+	animation-delay: calc(var(--delay) + .1s);
+}
+
+.particles  div:nth-child(3){
+	width: 3px;
+	height: 3px;
+	top: 20%;
+	left: 70%;
+	animation-name: jumpRight;
+	animation-delay: calc(var(--delay) + .15s);
+}
+
+.particles  div:nth-child(4){
+	width: 5px;
+	height: 5px;
+	top: 30%;
+	left: 50%;
+	animation-name: jumpRight;
+	animation-delay: calc(var(--delay) + .3s);
+}
+
+@keyframes jumpLeft{
+	0%{
+		transform: translate(0,0) scale(0);
+	}
+
+	45%{
+		transform: translate(0,0) scale(0);
+	}
+
+	60%{
+		transform: translate(-50px, -90px) scale(1);
+	}
+
+	100%{
+		transform: translate(-60px, 0px) scale(.1);
+	}
+}
+
+@keyframes jumpRight{
+	0%{
+		transform: translate(0,0) scale(0);
+	}
+
+	45%{
+		transform: translate(0,0) scale(0);
+	}
+
+	60%{
+		transform: translate(30px, -80px) scale(1);
+	}
+
+	100%{
+		transform: translate(50px, 0px) scale(.1);
+	}
+}
