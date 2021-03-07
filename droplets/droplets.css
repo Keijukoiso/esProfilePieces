@@ -14,7 +14,7 @@
 	display: flex;
 	position: fixed;
 	left: 5%;
-    top: 10%;
+    	top: 10%;
 	width: 120%;
 	pointer-events: none;
 }
@@ -41,7 +41,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    float: left;
+    	float: left;
 }
 
 .rain{
