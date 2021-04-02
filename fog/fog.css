@@ -7,7 +7,7 @@
   Remove this comment when you add the CSS to your profile.
 */
 
-#container {
+.container {
 display: flex;
 position: fixed;
 left: 0;
@@ -17,7 +17,7 @@ pointer-events: none;
 
 }
 
-#fog {
+.fog {
 width: 120vw;
 position: relative;
 animation-name: fog;
