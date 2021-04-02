@@ -18,6 +18,7 @@ pointer-events: none;
 }
 
 .fog {
+height: 100%;
 width: 120vw;
 position: relative;
 animation-name: fog;
