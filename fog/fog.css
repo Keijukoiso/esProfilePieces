@@ -1,0 +1,36 @@
+  
+/*
+  Fog effect for Everskies profile
+  
+  More profile stuff: https://github.com/Keijukoiso/esProfilePieces
+  For questions and to share ideas contact Keijukoiso on everskies
+  Remove this comment when you add the CSS to your profile.
+*/
+body {
+    background-color: black;
+}
+#container {
+background-color: black;
+display: flex;
+position: fixed;
+left: 0;
+bottom:0px;
+width: 120%;
+pointer-events: none;
+
+}
+
+#fog {
+width: 120vw;
+position: relative;
+animation-name: example;
+animation-duration: 8s; 
+animation-direction: alternate;
+animation-iteration-count: infinite;
+animation-timing-function:linear
+}
+
+@keyframes example {
+    from {right: 0px;}
+    to {right: 50px; }
+  }
