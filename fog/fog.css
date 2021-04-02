@@ -8,7 +8,6 @@
 */
 
 #container {
-background-color: black;
 display: flex;
 position: fixed;
 left: 0;
@@ -21,14 +20,14 @@ pointer-events: none;
 #fog {
 width: 120vw;
 position: relative;
-animation-name: example;
+animation-name: fog;
 animation-duration: 8s; 
 animation-direction: alternate;
 animation-iteration-count: infinite;
 animation-timing-function:linear
 }
 
-@keyframes example {
+@keyframes fog {
     from {right: 0px;}
     to {right: 50px; }
   }
