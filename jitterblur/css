@@ -1,0 +1,31 @@
+.div {
+animation: shake 2500ms linear forwards;
+animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+        filter: blur(1px);
+        transform: translateY(1px) rotate(0deg);
+    }
+
+    10%, 30%, 40%, 50%, 70%, 80%, 90% {
+        filter: blur(1px);
+        transform: translateY(-1px) rotate(0deg);
+    }
+
+    20%, 60% {
+        filter: blur(0px);
+        transform: translate(-1px, 1px) rotate(0deg);
+    }
+
+    45%, 85% {
+        filter: blur(1px);
+        transform: translate(1px, -1px) rotate(0deg);
+    }
+
+    100% {
+        filter: blur(0px);
+        transform: translate(0) rotate(-1deg);
+    }
+}
