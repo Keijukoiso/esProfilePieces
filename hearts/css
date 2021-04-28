@@ -1,0 +1,16 @@
+.overlay img {
+pointer-events: none;
+display: flex;
+position: fixed;
+left: 0;
+bottom:0px;
+height: 642px;
+width: 1366px;
+animation-name: filter;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+}
+@keyframes filter {
+0% {filter: opacity(20%) brightness(160%);}
+50% {filter: opacity(60%) brightness(100%);}
+100% {filter: opacity(20%) brightness(160%);}
